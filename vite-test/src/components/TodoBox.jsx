@@ -1,5 +1,5 @@
 import React from 'react';
-import '../index.css';
+import '../styles/plan.css';
 
 export default function TodoBox({ list, isDone, deleteDoneList, addDoneList }) {
   return (

@@ -1,6 +1,7 @@
 /*modal*/
-body {
+.content {
   width: 100;
+  background-color: white;
 }
 
 .count {

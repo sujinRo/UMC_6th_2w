@@ -16,16 +16,14 @@ function ModalPage() {
   };
 
   return (
-    <>
-      <div>
-        {isOpen ? <Modal closeModal={onClickCloseModal} /> : <></>}
-        <div className="large">안녕하세요!</div>
-        <div className="small">내용내용내용</div>
-        <button className="btn" onClick={onClickModal}>
-          버튼 열기
-        </button>
-      </div>
-    </>
+    <div className="content">
+      {isOpen ? <Modal closeModal={onClickCloseModal} /> : <></>}
+      <div className="large">안녕하세요!</div>
+      <div className="small">내용내용내용</div>
+      <button className="btn" onClick={onClickModal}>
+        버튼 열기
+      </button>
+    </div>
   );
 }
 

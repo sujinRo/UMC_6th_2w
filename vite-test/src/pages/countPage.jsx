@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../App.css';
 
 function CountPage() {
   const [count, setCount] = useState(0);
