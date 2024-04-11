@@ -1,86 +1,117 @@
-/*modal*/
 body {
   width: 100;
-}
-
-.count {
-  margin-bottom: 40px;
-}
-
-.large {
-  font-size: 27px;
-  font-weight: 800;
-}
-
-.small {
-  font-size: 15px;
-  margin-top: 15px;
-}
-
-.btn {
-  width: 70px;
-  height: 18px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-size: 10px;
-  margin-top: 15px;
-  cursor: pointer;
-}
-
-.modal {
-  width: 100%;
   height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(81, 81, 81, 0.7);
-  display: flex;
-  z-index: 1;
+  background-color: rgb(254, 255, 223);
+  font-family: 'Pretendard-Regular';
+  color: rgb(31, 31, 31);
 }
 
-.modalBox {
-  width: 400px;
-  height: 160px;
-  border: transparent;
-  border-radius: 5px;
-  background-color: white;
+.box {
+  width: 800px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 0 13px;
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
-}
-
-.modalLarge {
-  font-size: 22px;
+.title {
+  font-size: 28px;
   font-weight: 800;
 }
 
-.modalSmall {
-  font-size: 13px;
-  margin-top: 10px;
-}
-
-.btnBox {
+.subTitle {
+  width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  margin: 20px 0 5px 0;
 }
 
-.modalBtn {
-  width: 40px;
-  height: 18px;
+.long {
+  width: 100%;
+  height: 2px;
   background-color: white;
-  border: 1px solid black;
+  border: none;
+  margin: 40px 0 15px 0;
+}
+
+.mini {
+  width: 250px;
+  height: 0.8px;
+  border: none;
+  background-color: rgb(188, 188, 188);
+}
+
+input {
+  width: 600px;
+  height: 45px;
   border-radius: 5px;
-  font-size: 10px;
-  margin-top: 20px;
+  border: 2px rgb(188, 188, 188) solid;
+  outline: none;
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+.planBox {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.todo,
+.done {
+  width: 295px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.todoList,
+.doneList {
+  width: 250px;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.todoList li {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  word-break: break-all;
+}
+
+.doneList li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  word-break: break-all;
+}
+
+.delete {
   cursor: pointer;
+}
+
+.checkBox {
+  cursor: pointer;
+}
+
+.doneCheckBox {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
 }
