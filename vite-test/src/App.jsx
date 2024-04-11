@@ -5,8 +5,14 @@ import TodoBox from './components/TodoBox';
 
 function App() {
   const [text, setText] = useState('');
-  const [todoList, setTodoList] = useState([]);
-  const [doneList, setDoneList] = useState([]);
+  const [todoList, setTodoList] = useState([
+    { text: 'Send E-mail', id: uuidv4() },
+    { text: 'Make Work-Books', id: uuidv4() },
+  ]);
+  const [doneList, setDoneList] = useState([
+    { text: 'Sleeping', id: uuidv4() },
+    { text: 'Watching You-Tube', id: uuidv4() },
+  ]);
 
   const onChange = e => {
     setText(e.target.value);
