@@ -14,6 +14,7 @@ export default function MoviePage() {
             movieImage={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
             title={item.title}
             star={item.vote_average}
+            overview={item.overview}
           />
         </div>
       ))}

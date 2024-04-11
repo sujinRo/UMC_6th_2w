@@ -10,6 +10,7 @@ body {
 }
 
 .movieBox {
+  position: relative;
   width: 350px;
   height: 630px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -34,4 +35,38 @@ body {
 
 .star {
   font-size: 16px;
+}
+
+.explainBox {
+  width: 350px;
+  height: 630px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 10px 10px;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.explainBox:hover {
+  display: block;
+  opacity: 100;
+}
+
+.explainTitle {
+  margin: 40px 0 40px 20px;
+  font-size: 18px;
+}
+
+.explain {
+  width: 310px;
+  font-size: 16px;
+}
+
+.explainPosition {
+  width: 350px;
+  display: flex;
+  justify-content: center;
 }
