@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import './index.css';
+import TodoBox from './components/TodoBox';
 
 function App() {
   const [text, setText] = useState('');
@@ -45,33 +46,12 @@ function App() {
         <div className="todo">
           <div className="subTitle">해야 할 일</div>
           <hr className="mini" />
-          <ul className="todoList">
-            {todoList.map((item, idx) => (
-              <li key={idx}>
-                <div className="checkBox" onClick={() => addDoneList(item.text, item.id)}>
-                  ☐
-                </div>
-                <div>{item.text}</div>
-              </li>
-            ))}
-          </ul>
+          <TodoBox list={todoList} isDone={false} deleteDoneList={deleteDoneList} addDoneList={addDoneList} />
         </div>
         <div className="done">
           <div className="subTitle">해낸 일</div>
           <hr className="mini" />
-          <ul className="doneList">
-            {doneList.map((item, idx) => (
-              <li key={idx}>
-                <div className="doneCheckBox">
-                  <div>☑</div>
-                  <div>{item.text}</div>
-                </div>
-                <div className="delete" onClick={() => deleteDoneList(item.id)}>
-                  ✕
-                </div>
-              </li>
-            ))}
-          </ul>
+          <TodoBox list={doneList} isDone={true} deleteDoneList={deleteDoneList} addDoneList={addDoneList} />
         </div>
       </div>
     </div>
