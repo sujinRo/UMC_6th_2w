@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Modal from './components/Modal';
 import './App.css';
 
 function App() {
@@ -15,6 +16,16 @@ function App() {
     console.log('decrease가 클릭됨');
   };
 
+  const onClickModal = () => {
+    setIsOpen(true);
+    console.log('모달이 켜짐');
+  };
+
+  const onClickCloseModal = () => {
+    setIsOpen(false);
+    console.log('모달이 꺼짐');
+  };
+
   return (
     <>
       <div className="count">
@@ -25,35 +36,12 @@ function App() {
         <button id="decrease" onClick={onClickDecrease}>
           -1
         </button>
-        <script src="./js/count.js"></script>
       </div>
       <div>
-        <div class={isOpen ? 'modal' : 'closeModal'}>
-          <div class="modalBox">
-            <div class="text">
-              <div class="modalLarge">안녕하세요</div>
-              <div class="modalSmall">모달 내용은 어쩌고 저쩌고..</div>
-            </div>
-            <div class="btnBox">
-              <button
-                class="modalBtn"
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-              >
-                닫기
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="large">안녕하세요!</div>
-        <div class="small">내용내용내용</div>
-        <button
-          class="btn"
-          onClick={() => {
-            setIsOpen(true);
-          }}
-        >
+        {isOpen ? <Modal closeModal={onClickCloseModal} /> : <></>}
+        <div className="large">안녕하세요!</div>
+        <div className="small">내용내용내용</div>
+        <button className="btn" onClick={onClickModal}>
           버튼 열기
         </button>
       </div>
