@@ -44,7 +44,7 @@ function App() {
   };
 
   return (
-    <div className="content">
+    <div className="planContent">
       <div className="box">
         <div className="title">UMC STUDY PLAN</div>
         <hr className="long" />

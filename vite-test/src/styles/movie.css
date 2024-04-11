@@ -1,12 +1,10 @@
-body {
+.movieContent {
   width: 100;
-  background-color: rgb(15, 0, 69);
-}
-.contents {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  background-color: rgb(15, 0, 69);
 }
 
 .movieBox {

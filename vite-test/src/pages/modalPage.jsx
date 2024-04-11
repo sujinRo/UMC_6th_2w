@@ -16,7 +16,7 @@ function ModalPage() {
   };
 
   return (
-    <div className="content">
+    <div className="modalContent">
       {isOpen ? <Modal closeModal={onClickCloseModal} /> : <></>}
       <div className="large">안녕하세요!</div>
       <div className="small">내용내용내용</div>

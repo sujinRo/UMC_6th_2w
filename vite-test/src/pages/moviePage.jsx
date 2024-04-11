@@ -7,7 +7,7 @@ export default function MoviePage() {
   const list = movies.results;
 
   return (
-    <div className="contents">
+    <div className="movieContent">
       {list.map((item, idx) => (
         <div key={idx}>
           <Movie
